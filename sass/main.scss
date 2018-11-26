@@ -5,3 +5,7 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
+
+img {
+  transform: translate(0,-100%);
+}
