@@ -3,6 +3,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 
 
 sass.compiler = require('node-sass');
@@ -17,6 +19,24 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', function () {
+gulp.task('sass', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
+});
+
+
+// Static server
+
+
+
+// Watch scss AND html files, doing different things with each.
+gulp.task('serve', function () {
+
+    // Serve files from the root of this project
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp.watch("*.html").on("change", reload);
 });
