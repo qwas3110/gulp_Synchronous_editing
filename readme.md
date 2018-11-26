@@ -45,11 +45,19 @@ cnpm install 国内。
    
 
 * gulp 规定你运行gulpfile.js 时应执行的所有任务
-   * 测试 gulp 是否安装成功
+   * 测试 gulp 是否安装成功 gulpfile.js
      ```
-     var gulp = require('gulp'):
-     gulp.task('default',function()
-     )
+     const gulp = require('gulp');
+     
+     gulp.task('default',function () {
+         console.log('test successful')
+     })
      ```
-  
+   * 运行测试,运行gulp命令时，要在自己的项目目录里面
+   ``` 
+   $ gulp 
+   [11:06:00] Starting 'default'...
+   test successful
+   [11:06:00] Finished 'default' after 1.03 ms
+   ```
 
