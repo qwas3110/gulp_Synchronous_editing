@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="https://gulpjs.com">
+    <img height="257" width="114" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
+  </a>
+  <p align="center">The streaming build system</p>
+</p>
+
 # gulp  实时编辑
 
 ## 安装
@@ -25,11 +32,10 @@ cnpm install 国内。
 
 ## gulp 说明
 
-* gulp 项目从 gulp 文件开始,gulpfile.js 位于项目根目录中
+* gulpfile.js 要位于项目根目录中
 
-* gulp 规定你运行gulpfile.js 时应执行的所有任务
+  * Your project dir
  
- * <Your project dir>
      * gulpfile.js
      * sass
      * js
@@ -37,3 +43,13 @@ cnpm install 国内。
      * imag
      * ........ 
    
+
+* gulp 规定你运行gulpfile.js 时应执行的所有任务
+   * 测试 gulp 是否安装成功
+     ```
+     var gulp = require('gulp'):
+     gulp.task('default',function()
+     )
+     ```
+  
+
