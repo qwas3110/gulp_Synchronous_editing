@@ -46,10 +46,8 @@ cnpm install 国内。
      * tests
      * imag
      * ........ 
-   
 
    * gulp 规定你运行gulpfile.js 时应执行的所有任务
-
       * 测试 gulp 是否安装成功 gulpfile.js
      ```
      const gulp = require('gulp');
@@ -59,29 +57,22 @@ cnpm install 国内。
      })
      ```
      * 运行测试,运行gulp命令时，要在自己的项目目录里面
-     
-        ``` 
-      $ gulp 
+     ``` 
+     $ gulp 
         [11:06:00] Starting 'default'...
          test successful
         [11:06:00] Finished 'default' after 1.03 ms
-        ```
-
+     ```   
 
 ##  gulp-sass
 
 * 安装，可以参考[官网](hhttps://sass-lang.com/install)安装
-
 ```
 $ sudo npm install gulp-sass 
-
 ```
 
 * .css文件放入 sass 文件夹,
-
   * .css文件改成 .sass
-
-
 * 使用 gulp-sass插件 
   * 第一个参数作用 styles 样式。
   * 第二个参数函数 调用任务时执行
@@ -99,8 +90,6 @@ gulp.task('sass', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
-
-
 ```
 ## Gulp Autoprefixer
 
@@ -111,5 +100,4 @@ gulp.task('sass', function () {
 * [安装与使用详细](https://www.npmjs.com/package/gulp-autoprefixer)
     * 安装
     ``` $ npm install --save-dev gulp-autoprefixer ```
-
    
