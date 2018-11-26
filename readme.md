@@ -101,3 +101,17 @@ gulp.task('sass', function () {
     * 安装
     ``` $ npm install --save-dev gulp-autoprefixer ```
    
+
+## gulp watch 
+* './sass/**/*.scss':文件路径,类型
+* ['sass'] 第二个参数可以是任务函数中的回调，或者是带有一系列任务的数组
+```
+gulp.task('default', function () {
+    gulp.watch('./sass/**/*.scss', ['sass']);
+});
+```
+
+## [browsersync 浏览器同步](https://www.browsersync.io/)
+
+* 安装 browser-sync
+``` npm install -g browser-sync ```
